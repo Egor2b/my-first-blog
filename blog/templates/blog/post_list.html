@@ -10,15 +10,12 @@
             </div>
 
             <div>
-                <p>published: 10.04.2016, 12:14</p>
-                <h2><a href="">Первый пост</a></h2>
-                <p>Офигенно важная статичная инфа</p>
-            </div>
-
-            <div>
-                <p>published: 11.04.2016, 12:14</p>
-                <h2><a href="">Второй пост</a></h2>
-                <p>Еще более важная фигня</p>
+              {% for post in posts %}
+              <div>
+                <h2><a href="">{{ post.title }}</a>  <font size=2 color = red>{{post.published_date}}</font></h2>
+                <p>{{post.text}}</p>
+              </div>
+              {% endfor %}
             </div>
 
 Можно я не буду заморачиваться со всяким мусором
