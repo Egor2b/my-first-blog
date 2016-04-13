@@ -10,7 +10,7 @@
 </div>
   <div>
     {% if user.is_authenticated %}
-  </br><a href="{% url 'blog.views.post_new' %}"><span>Создать запись</span></a></br>
+  </br><a href="{% url 'blog.views.post_new' %}"><span>Создать новое сообщение...</span></a></br>
     {% endif %}
   </div>
 
@@ -18,9 +18,6 @@
       {% block content %}
       {% endblock %}
   </div>
-
-</br>Можно я не буду заморачиваться со всяким мусором
-
   </body>
 
 </html>

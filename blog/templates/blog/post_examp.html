@@ -5,13 +5,14 @@
    </br><a href="{% url 'blog.views.post_list' %}"><span>Вернуться на главную</span></a>
    </div>
        <div>
-           {% if post.published_date %}
-               <div>
-                   {{ post.published_date }}
-               </div>
-           {% endif %}
-           <h1>{{ post.title }}</h1>
-           <p>{{ post.text|linebreaks }}</p>
-           <a href="{% url 'post_edit' pk=post.pk %}"><span>Редактирование</span></a>
+          <h1>{{ post.title }}</h1>
+          {% if post.published_date %}
+              <div>
+              {{ post.published_date }}
+              </div>
+          {% endif %}
+              <p>{{ post.text|linebreaks }}</p>
+         </br>
+           <a href="{% url 'post_edit' pk=post.pk %}"><span><font color=red>Изменить данную запись</font></span></a>
        </div>
    {% endblock %}
