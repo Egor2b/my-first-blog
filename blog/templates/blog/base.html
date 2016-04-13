@@ -3,10 +3,15 @@
 <title>Странненький блог</title>
 </head>
 <body>
+<div>
+  <div>
+      <h1><font color=#aaa000>Офигительный Блог</font></h1>
+  </div>
+</div>
   <div>
     {% if user.is_authenticated %}
-    <a href="{% url 'blog.views.post_new' %}"><span>Создать запись</span></a>
-    {% endif %} 
+  </br><a href="{% url 'blog.views.post_new' %}"><span>Создать запись</span></a></br>
+    {% endif %}
   </div>
 
   <div>
@@ -14,7 +19,7 @@
       {% endblock %}
   </div>
 
-Можно я не буду заморачиваться со всяким мусором
+</br>Можно я не буду заморачиваться со всяким мусором
 
   </body>
 

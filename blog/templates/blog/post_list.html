@@ -2,14 +2,11 @@
 
 {% block content %}
             <div>
-                <h1><a href="http://interfax.com.ua">Interfax.com.ua</a></h1>
-            </div>
-
-            <div>
               {% for post in posts %}
               <div>
                 <h2><a href="{% url 'post_detail' pk=post.pk %}">{{ post.title }}</a>  <font size=2 color = green>{{post.published_date}}</font></h2>
                 <p>{{post.text|linebreaks}}</p>
+                <p>Удалить эту сраную запись</p>
               </div>
               {% endfor %}
             </div>

@@ -1,6 +1,10 @@
 {% extends 'blog/base.html' %}
 
    {% block content %}
+   <div>
+   </br><a href="{% url 'blog.views.post_list' %}"><span>Вернуться на главную</span></a>
+   </div>
+
        <h1>Добавляем сообщение</h1>
        <form method="POST" class="post-form">{% csrf_token %}
             {{ form.as_p }}
