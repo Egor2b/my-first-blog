@@ -4,6 +4,12 @@
 </head>
 <body>
   <div>
+    {% if user.is_authenticated %}
+    <a href="{% url 'blog.views.post_new' %}"><span>Создать запись</span></a>
+    {% endif %} 
+  </div>
+
+  <div>
       {% block content %}
       {% endblock %}
   </div>
